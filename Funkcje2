@@ -1,0 +1,6 @@
+def wiecej_niz(tekst,liczba):
+    for x in set(tekst):
+        if tekst.count(x) > liczba:
+            print(f'{x} : ile razy? : {tekst.count(x)}')
+
+wiecej_niz("aaaaaavbbbbccc",2)
