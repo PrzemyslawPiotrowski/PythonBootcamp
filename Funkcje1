@@ -1,0 +1,16 @@
+import pytest
+
+def funkcja1(liczba):
+    for x in range(2, liczba):
+        if liczba % x == 0:
+            return False
+    return True
+@pytest.mark.parametrize(
+    'number, word', [
+        (1, True),
+        (3, True),
+        (5, True),
+        (6, False),
+    ])
+def test_liczba_pierwsza(number, word):
+    assert funkcja1(number) == word
