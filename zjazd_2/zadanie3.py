@@ -1,10 +1,7 @@
 import pytest
 
 def lata_przestepne(poczatek,koniec):
-    skladzik = []
-    for x in range(poczatek,koniec+1):
-        if (x % 4 == 0 and x % 100 != 0) or (x % 400 == 0):
-            skladzik.append(x)
+    skladzik = [x for x in range(poczatek,koniec + 1) if (x % 4 == 0 and x % 100 != 0) or (x % 400 == 0)]
     print(skladzik)
     return skladzik
 
