@@ -1,10 +1,7 @@
 import pytest
 
 def filtruj(lista, zakres1, zakres2):
-    skladzik = []
-    for x in lista:
-        if x in range(zakres1, zakres2+1):
-            skladzik.append(x)
+    skladzik = [x for x in lista if x in range(zakres1, zakres2+1)]
     print(skladzik)
     return skladzik
 
