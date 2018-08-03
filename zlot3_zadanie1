@@ -1,0 +1,47 @@
+class ten_to_two:
+    wynik = []
+
+    def __init__(self, liczba):
+        self.liczba = liczba
+        self.liczba_to_print = liczba
+
+    def policz(self):
+        while self.liczba >= 1:
+            if self.liczba % 2 == 0:
+                self.wynik.append(0)
+            else:
+                self.wynik.append(1)
+            self.liczba = int(self.liczba / 2)
+        return self.wynik
+
+    def printy(self):
+        print(f'for decimal: {self.liczba_to_print}, binary: {self.wynik[::-1]}')
+
+
+class two_to_ten:
+    wynik = 0
+
+    def __init__(self, liczba):
+        self.liczba = liczba
+        self.liczba_to_print = liczba
+
+    def policz(self):
+        y = -1
+        for x in self.liczba[::-1]:
+            y += 1
+            if x == '1':
+                self.wynik = self.wynik + (2 ** y)
+            else:
+                self.wynik = self.wynik + 0
+        return self.wynik
+
+    def printy(self):
+        print(f'for binary: {self.liczba_to_print}, decimal: {self.wynik}')
+
+
+b = ten_to_two(199)
+b.policz()
+b.printy()
+q = two_to_ten('11000111')
+q.policz()
+q.printy()
