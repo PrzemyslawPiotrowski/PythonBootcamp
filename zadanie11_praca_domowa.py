@@ -28,7 +28,7 @@ class Document:
         self.document.append(element.render())
 
     def render(self):
-        print('\n'.join(map(str, self.document)))
+        print('\n'.join(self.document))
 
 
 document = Document()
