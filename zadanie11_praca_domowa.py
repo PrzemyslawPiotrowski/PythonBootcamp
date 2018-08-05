@@ -3,7 +3,7 @@ class Element:
         self.element = element
 
     def render(self):
-        return (self.element)
+        return self.element
 
 
 class HeaderElement(Element):
